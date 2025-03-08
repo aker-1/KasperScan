@@ -27,7 +27,7 @@ chmod 777 *
 ./Scan_KasperSky.sh -u https://example.com
 ./Scan_KasperSky.sh -h d41d8cd98f00b204e9800998ecf8427e
 
-🖼️ Screenshot
+# Screenshot
 
 <p align="center">
   <img src="Scan_KasperSky.png" alt="KasperScan Screenshot">
