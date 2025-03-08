@@ -23,7 +23,6 @@ KasperScan is an open-source tool written in Bash, utilizing the Kaspersky API t
 <br><br><hr><br>
 
 # Usage
-<br>
 `cd KasperScan`<br><br>
 `chmod 777 *`<br><br>
 `./Scan_KasperSky.sh`<br><br>
