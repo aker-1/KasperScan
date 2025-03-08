@@ -1,6 +1,6 @@
 
 <br><br>
-<img src="https://avatars.githubusercontent.com/u/202319508?v=4" style="border-radius:50%">
+<img src="https://avatars.githubusercontent.com/u/202319508?v=4" style="border-radius:50%" width="200">
 <br><br>
 
 
