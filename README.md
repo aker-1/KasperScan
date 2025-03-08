@@ -4,7 +4,7 @@
   <img src="https://avatars.githubusercontent.com/u/202319508?v=4" alt="KasperScan Logo" width="200" height="200" style="border-radius: 50%; border: 1px solid white;">
 </p>
 
-## What is KasperScan?
+# What is KasperScan?
 
 KasperScan is an open-source tool written in Bash, utilizing the Kaspersky API to scan :
 - Hashes
@@ -13,16 +13,21 @@ KasperScan is an open-source tool written in Bash, utilizing the Kaspersky API t
 - Files
 - And more...
 
+<br><hr><br>
+
+
 # Clone KasperScan Tool
 
 `git clone https://github.com/aker-1/KasperScan.git`<br><br><br>
 
-# Usage
+<br><br><hr><br>
 
+# Usage
+<br>
 `cd KasperScan`<br><br>
 `chmod 777 *`<br><br>
 `./Scan_KasperSky.sh`<br><br>
-
+<br><hr><br>
 # Screenshot
 
 <p align="center">
