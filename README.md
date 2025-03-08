@@ -50,12 +50,13 @@ Feel free to improve the tool by submitting Pull Requests.
 
 Report issues by opening GitHub Issues.
 
+<br><br>
 
 # License
 
 This tool is licensed under the MIT License.
 
 
-# Contact with me
+## Contact with me
 
 
