@@ -13,18 +13,15 @@ KasperScan is an open-source tool written in Bash, utilizing the Kaspersky API t
 - Files
 - And more...
 
-## 🚀 Installation
+# Installation
 
-`git clone https://github.com/aker-1/KasperScan.git`<br><br>
+`git clone https://github.com/aker-1/KasperScan.git`<br><br><br>
+
+# Usage
+
 `cd KasperScan`<br><br>
 `chmod 777 *`<br><br>
 `./Scan_KasperSky.sh`<br><br>
-
-📌 Usage
-
-./Scan_KasperSky.sh -f file_to_scan.txt
-./Scan_KasperSky.sh -u https://example.com
-./Scan_KasperSky.sh -h d41d8cd98f00b204e9800998ecf8427e
 
 # Screenshot
 
