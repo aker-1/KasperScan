@@ -1,6 +1,6 @@
 # KasperScan
 
-<p align="center">
+<p align="center" style="text-align:center">
   <img src="https://avatars.githubusercontent.com/u/202319508?v=4" alt="KasperScan Logo" width="200" height="200" style="border-radius: 50%; border: 1px solid white;">
 </p>
 
@@ -57,3 +57,8 @@ This tool is licensed under the MIT License.
 5. Encouraged contributions by adding a `Contributing` section.
 
 You're ready to push this file to GitHub! Do you need any modifications?
+
+
+
+### Contact with me
+
