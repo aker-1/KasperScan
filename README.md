@@ -30,7 +30,7 @@ chmod 777 *
 🖼️ Screenshot
 
 <p align="center">
-  <img src="https://github.com/aker-1/KasperScan/blob/main/screenshot.png" alt="KasperScan Screenshot">
+  <img src="Scan_KasperSky.png" alt="KasperScan Screenshot">
 </p>📋 Requirements
 
 Linux or macOS
