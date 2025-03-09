@@ -1,6 +1,6 @@
 # KasperScan
 
-<p align="center" style="text-align:center">
+<p style="text-align:center">
   <img src="https://avatars.githubusercontent.com/u/202319508?v=4" alt="KasperScan Logo" width="200" height="200" style="border-radius: 50%; border: 1px solid white;">
 </p>
 
@@ -13,7 +13,7 @@ KasperScan is an open-source tool written in Bash, utilizing the Kaspersky API t
 - Files
 - And more...
 
-<br><hr><br>
+<br><br>
 
 
 # Clone KasperScan Tool
@@ -29,7 +29,7 @@ KasperScan is an open-source tool written in Bash, utilizing the Kaspersky API t
 # Screenshot
 
 <p align="center">
-  <img src="Scan_KasperSky.png" alt="KasperScan Screenshot" style="border-radius:3px">
+  <img src="Scan_KasperSky.jpg" alt="KasperScan Screenshot" style="border-radius:3px">
 </p>
 
 <br>
@@ -50,7 +50,7 @@ Feel free to improve the tool by submitting Pull Requests.
 
 Report issues by opening GitHub Issues.
 
-<br><br>
+<br>
 
 # License
 
