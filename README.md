@@ -1,7 +1,7 @@
 # KasperScan
 
 <p style="text-align:center">
-  <img src="https://avatars.githubusercontent.com/u/202319508?v=4" alt="KasperScan Logo" width="200" height="200" style="border-radius: 50%; border: 1px solid white;">
+  <img src="KasperScan_Icon.jpg" alt="KasperScan Logo" width="200" height="200" style="border-radius: 50%; border: 1px solid white;">
 </p>
 
 # What is KasperScan?
