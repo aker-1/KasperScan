@@ -40,8 +40,6 @@ Linux or macOS
 
 Bash Shell
 
-Kaspersky API Key (Get it from here)
-
 <br>
 
 # Contributing
@@ -56,6 +54,7 @@ Report issues by opening GitHub Issues.
 
 This tool is licensed under the MIT License.
 
+<br>
 
 ## Contact with me
 
