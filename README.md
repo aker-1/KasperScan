@@ -29,7 +29,7 @@ KasperScan is an open-source tool written in Bash, utilizing the Kaspersky API t
 # Screenshot
 
 <p align="center">
-  <img src="Scan_KasperSky.jpg" alt="KasperScan Screenshot" style="border-radius:3px">
+  <img src="Scan_KasperSky.png" alt="KasperScan Screenshot" style="border-radius:3px">
 </p>
 
 <br>
