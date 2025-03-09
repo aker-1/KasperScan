@@ -1,7 +1,7 @@
 # KasperScan
 
 <p align="center">
-  <img src="KasperScan_Icon.jpg" alt="KasperScan Logo" width="600" height="600" style="border-radius: 50%; border: 1px solid white;">
+  <img src="KasperScan_Icon.jpg" alt="KasperScan Logo" width="800" height="600" style="border-radius: 50%; border: 1px solid white;">
 </p>
 
 # What is KasperScan?
