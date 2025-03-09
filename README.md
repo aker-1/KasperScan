@@ -42,7 +42,7 @@ Bash Shell
 
 Kaspersky API Key (Get it from here)
 
-<br><br>
+<br>
 
 # Contributing
 
