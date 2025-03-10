@@ -36,6 +36,20 @@ function funcorrect(){
     echo -e "${GREEN}=========== CORRECT CHOICE ===========${WHITE}"
 }
 
+function funjson() {
+    echo -e "$response" | jq -r '
+    def recurse_kv: 
+    to_entries[] | 
+    if (.value | type) == "object" or (.value | type) == "array" then 
+        .value | recurse_kv 
+    else 
+        "${WHITE}=============================${RESET}",
+        "Key    : " + .key,
+        "Value  : " + (.value | tostring)
+    end; 
+    recurse_kv'
+}
+
 api_key="QhiUmXGhTrWTyyM/z8YBJA=="
 
 while true; do
@@ -50,17 +64,7 @@ while true; do
             response=$(curl --request GET "https://opentip.kaspersky.com/api/v1/search/hash?request=$hash" --header "x-api-key: $api_key")
             funecho
             funspace
-            echo "$response" | jq -r '
-            def recurse_kv: 
-            to_entries[] | 
-            if (.value | type) == "object" or (.value | type) == "array" then 
-                .value | recurse_kv 
-            else 
-                "=============================",
-                "Key    : " + .key,
-                "Value  : " + (.value | tostring)
-            end; 
-            recurse_kv'
+            funjson
             break
             ;;
         2)
@@ -71,17 +75,7 @@ while true; do
             response=$(curl --request GET "https://opentip.kaspersky.com/api/v1/search/ip?request=$ip" --header "x-api-key: $api_key")
             funecho
             funspace
-            echo "$response" | jq -r '
-            def recurse_kv: 
-            to_entries[] | 
-            if (.value | type) == "object" or (.value | type) == "array" then 
-                .value | recurse_kv 
-            else 
-                "=============================",
-                "Key    : " + .key,
-                "Value  : " + (.value | tostring)
-            end; 
-            recurse_kv'
+            funjson
             break
             ;;
         3)
@@ -92,17 +86,7 @@ while true; do
             response=$(curl --request GET "https://opentip.kaspersky.com/api/v1/search/domain?request=$domain" --header "x-api-key: $api_key")
             funecho
             funspace
-            echo "$response" | jq -r '
-            def recurse_kv: 
-            to_entries[] | 
-            if (.value | type) == "object" or (.value | type) == "array" then 
-                .value | recurse_kv 
-            else 
-                "=============================",
-                "Key    : " + .key,
-                "Value  : " + (.value | tostring)
-            end; 
-            recurse_kv'
+            funjson
             break
             ;;
         4)
@@ -113,17 +97,7 @@ while true; do
             response=$(curl --request GET "https://opentip.kaspersky.com/api/v1/search/url?request=$web" --header "x-api-key: $api_key")
             funecho
             funspace
-            echo "$response" | jq -r '
-            def recurse_kv: 
-            to_entries[] | 
-            if (.value | type) == "object" or (.value | type) == "array" then 
-                .value | recurse_kv 
-            else 
-                "=============================",
-                "Key    : " + .key,
-                "Value  : " + (.value | tostring)
-            end; 
-            recurse_kv'
+            funjson
             break
             ;;
         5)
@@ -135,17 +109,7 @@ while true; do
             response=$(curl --request POST "https://opentip.kaspersky.com/api/v1/scan/file?filename=$basic_file" --header "x-api-key: $api_key" --header 'Content-Type: application/octet-stream' --data-binary "@$file_path")
             funecho
             funspace
-            echo "$response" | jq -r '
-            def recurse_kv: 
-            to_entries[] | 
-            if (.value | type) == "object" or (.value | type) == "array" then 
-                .value | recurse_kv 
-            else 
-                "=============================",
-                "Key    : " + .key,
-                "Value  : " + (.value | tostring)
-            end; 
-            recurse_kv'
+            funjson
             break
             ;;
         6)
@@ -155,17 +119,7 @@ while true; do
             funecho
             response=$(curl --request POST "https://opentip.kaspersky.com/api/v1/getresult/file?request=$file_hash" --header "x-api-key: $api_key")funecho
             funspace
-            echo "$response" | jq -r '
-            def recurse_kv: 
-            to_entries[] | 
-            if (.value | type) == "object" or (.value | type) == "array" then 
-                .value | recurse_kv 
-            else 
-                "=============================",
-                "Key    : " + .key,
-                "Value  : " + (.value | tostring)
-            end; 
-            recurse_kv'
+            funjson
             break
             ;;
         *)
