@@ -43,7 +43,7 @@ function funjson() {
     if (.value | type) == "object" or (.value | type) == "array" then 
         .value | recurse_kv 
     else 
-        "${WHITE}=============================${RESET}",
+        echo -e "${WHITE}=============================${RESET}",
         "Key    : " + .key,
         "Value  : " + (.value | tostring)
     end; 
