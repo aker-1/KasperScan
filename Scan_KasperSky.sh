@@ -53,7 +53,7 @@ while true; do
             echo "$response" | jq -r 'to_entries[] | 
                 "========================================", 
                 "Key    : " + .key, 
-                "Value  : " + (.value | tostring), 
+                "Value  : " + (.value | type) == "object" then (.value | @json) else (.value | tostring) end), 
                 "========================================"'
             break
             ;;
@@ -68,7 +68,7 @@ while true; do
             echo "$response" | jq -r 'to_entries[] | 
                 "========================================", 
                 "Key    : " + .key, 
-                "Value  : " + (.value | tostring), 
+                "Value  : " + (.value | type) == "object" then (.value | @json) else (.value | tostring) end), 
                 "========================================"'
             break
             ;;
@@ -83,7 +83,7 @@ while true; do
             echo "$response" | jq -r 'to_entries[] | 
                 "========================================", 
                 "Key    : " + .key, 
-                "Value  : " + (.value | tostring), 
+                "Value  : " + (.value | type) == "object" then (.value | @json) else (.value | tostring) end), 
                 "========================================"'
             break
             ;;
@@ -98,7 +98,7 @@ while true; do
             echo "$response" | jq -r 'to_entries[] | 
                 "========================================", 
                 "Key    : " + .key, 
-                "Value  : " + (.value | tostring), 
+                "Value  : " + (.value | type) == "object" then (.value | @json) else (.value | tostring) end), 
                 "========================================"'
             break
             ;;
@@ -114,7 +114,7 @@ while true; do
             echo "$response" | jq -r 'to_entries[] | 
                 "========================================", 
                 "Key    : " + .key, 
-                "Value  : " + (.value | tostring), 
+                "Value  : " + (.value | type) == "object" then (.value | @json) else (.value | tostring) end), 
                 "========================================"'
             break
             ;;
@@ -128,7 +128,7 @@ while true; do
             echo "$response" | jq -r 'to_entries[] | 
                 "========================================", 
                 "Key    : " + .key, 
-                "Value  : " + (.value | tostring), 
+                "Value  : " + (.value | type) == "object" then (.value | @json) else (.value | tostring) end),  
                 "========================================"'
             break
             ;;
