@@ -41,7 +41,7 @@ function funcorrect(){
 }
 
 function funjson() {
-    echo -e "$response" | jq -r arg line "$LINE"'
+    echo -e "$response" | jq -r line "$LINE" '
     def recurse_kv:
         to_entries[] |
         if (.value | type) == "object" or (.value | type) == "array" then
