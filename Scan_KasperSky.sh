@@ -8,6 +8,11 @@ GREEN="\e[1;92m"
 WHITE="\e[1;97m"
 PINK="\e[1;95m"
 
+function funlogo(){
+    toilet -f pagga -F metal KasperScan
+}
+
+funlogo
 echo -e "
   ${BLUE_BOLD}1-${YELLOW_BOLD} Hash${RESET}
   ${BLUE_BOLD}2-${YELLOW_BOLD} IP Address${RESET}
@@ -16,10 +21,7 @@ echo -e "
   ${BLUE_BOLD}5-${YELLOW_BOLD} Basic File Analysis${RESET}
   ${BLUE_BOLD}6-${YELLOW_BOLD} Full File Analysis${RESET}
 "
-function funlogo(){
-    toilet -f pagga -F metal KasperScan
-}
-funlogo
+
 function funecho(){
     echo -e  "${BLUE_BOLD}================================================================================${RESET}"
     echo -e  "${BLUE_BOLD}================================================================================${RESET}"
