@@ -48,10 +48,9 @@ function funjson() {
         "Key    : " + .key,
         "Value  : " + (.value | tostring),
         "=============================",
+        ""
     end;
-    recurse_kv' | while IFS= read -r line; do
-        echo "$line"
-    done
+    recurse_kv'
 }
 
 api_key="QhiUmXGhTrWTyyM/z8YBJA=="
