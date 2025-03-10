@@ -50,14 +50,6 @@ function funjson() {
         end;
     recurse_kv'
 }
-function funreqorg(url_api) {
-    funecho
-    response=$(curl --request GET "$url_api" --header "x-api-key: $api_key")
-    funecho
-    funspace
-    funjson
-}
-
 
 api_key="QhiUmXGhTrWTyyM/z8YBJA=="
 
@@ -91,7 +83,11 @@ while true; do
             funcorrect
             funspace
             read -p "Enter Domain: " domain
-            funreqorg("https://opentip.kaspersky.com/api/v1/search/ip?request=$hash")
+            funecho
+            response=$(curl --request GET "https://opentip.kaspersky.com/api/v1/search/domain?request=$domain" --header "x-api-key: $api_key")
+            funecho
+            funspace
+            funjson
             break
             ;;
         4)
