@@ -39,16 +39,17 @@ function funcorrect(){
 function funjson() {
     echo -e "$response" | jq -r '
     def recurse_kv:
-    to_entries[] |
-    if (.value | type) == "object" or (.value | type) == "array" then
-        .value | recurse_kv
-    else
-        "",
-        "=============================",
-        "Key    : " + (.key | tostring),
-        "Value  : " + (.value | tostring),
-        "=============================",
-    end;
+        to_entries[] |
+        if (.value | type) == "object" or (.value | type) == "array" then
+            .value | recurse_kv
+        else
+            "",
+            "=============================",
+            "Key    : " + (.key | tostring),
+            "Value  : " + (.value | tostring),
+            "=============================",
+            ""
+        end;
     recurse_kv'
 }
 
