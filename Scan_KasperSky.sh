@@ -16,7 +16,10 @@ echo -e "
   ${BLUE_BOLD}5-${YELLOW_BOLD} Basic File Analysis${RESET}
   ${BLUE_BOLD}6-${YELLOW_BOLD} Full File Analysis${RESET}
 "
-
+function funlogo(){
+    toilet -f pagga -F metal KasperScan
+}
+funlogo
 function funecho(){
     echo -e  "${BLUE_BOLD}================================================================================${RESET}"
     echo -e  "${BLUE_BOLD}================================================================================${RESET}"
