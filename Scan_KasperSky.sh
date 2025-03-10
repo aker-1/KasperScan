@@ -27,7 +27,9 @@ function funecho(){
     echo -e  "${BLUE_BOLD}================================================================================${RESET}"
     echo -e  "${BLUE_BOLD}================================================================================${RESET}"
 }
-
+function funline() {
+    echo -e "${WHITE}================================================================================${RESET}"
+}
 function funspace(){
     echo -e "\n"
 }
@@ -43,10 +45,10 @@ function funjson() {
         if (.value | type) == "object" or (.value | type) == "array" then
             .value | recurse_kv
         else
-            "'${WHITE}'================================================================================'${RESET}'",
+            funline,
             "Key    : " + (.key | tostring),
             "Value  : " + (.value | tostring),
-            "================================================================================"
+            funline
         end;
     recurse_kv'
 }
