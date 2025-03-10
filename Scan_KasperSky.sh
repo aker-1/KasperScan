@@ -45,10 +45,9 @@ function funjson() {
     else
         "",
         "=============================",
-        "Key    : " + .key,
+        "Key    : " + (.key | tostring),
         "Value  : " + (.value | tostring),
         "=============================",
-        ""
     end;
     recurse_kv'
 }
