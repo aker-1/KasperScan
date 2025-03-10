@@ -27,10 +27,6 @@ function funecho(){
     echo -e  "${BLUE_BOLD}================================================================================${RESET}"
     echo -e  "${BLUE_BOLD}================================================================================${RESET}"
 }
-function funline() {
-    echo -e "${WHITE}================================================================================${RESET}"
-}
-LINE=$(funline)
 
 function funspace(){
     echo -e "\n"
@@ -41,16 +37,16 @@ function funcorrect(){
 }
 
 function funjson() {
-    echo -e "$response" | jq -r line "$LINE" '
+    echo -e "$response" | jq -r '
     def recurse_kv:
         to_entries[] |
         if (.value | type) == "object" or (.value | type) == "array" then
             .value | recurse_kv
         else
-            $line,
+            "================================================================================",
             "Key    : " + (.key | tostring),
             "Value  : " + (.value | tostring),
-            $line
+            "================================================================================"
         end;
     recurse_kv'
 }
