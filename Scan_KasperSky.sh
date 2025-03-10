@@ -43,11 +43,13 @@ function funjson() {
     if (.value | type) == "object" or (.value | type) == "array" then 
         .value | recurse_kv 
     else 
-        echo -e "${WHITE}=============================${RESET}",
+        "===================================",
         "Key    : " + .key,
         "Value  : " + (.value | tostring)
     end; 
-    recurse_kv'
+    recurse_kv' | while IFS = read -r line; do
+        echo -e "${WHITE}{line}${RESET}"
+    done
 }
 
 api_key="QhiUmXGhTrWTyyM/z8YBJA=="
