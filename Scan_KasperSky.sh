@@ -38,17 +38,19 @@ function funcorrect(){
 
 function funjson() {
     echo -e "$response" | jq -r '
-    def recurse_kv: 
-    to_entries[] | 
-    if (.value | type) == "object" or (.value | type) == "array" then 
-        .value | recurse_kv 
-    else 
-        "===================================",
+    def recurse_kv:
+    to_entries[] |
+    if (.value | type) == "object" or (.value | type) == "array" then
+        .value | recurse_kv
+    else
+        "",
+        "=============================",
         "Key    : " + .key,
-        "Value  : " + (.value | tostring)
-    end; 
-    recurse_kv' | while IFS = read -r line; do
-        echo -e "${WHITE}{line}${RESET}"
+        "Value  : " + (.value | tostring),
+        "=============================",
+    end;
+    recurse_kv' | while IFS= read -r line; do
+        echo "$line"
     done
 }
 
