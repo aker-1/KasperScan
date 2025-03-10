@@ -43,13 +43,21 @@ function funjson() {
         if (.value | type) == "object" or (.value | type) == "array" then
             .value | recurse_kv
         else
-            echo -e "${WHITE}================================================================================{RESET}",
+            "================================================================================",
             "Key    : " + (.key | tostring),
             "Value  : " + (.value | tostring),
-            echo -e "${WHITE}================================================================================${RESET}"
+            "================================================================================"
         end;
     recurse_kv'
 }
+function funreqorg(url_api) {
+    funecho
+    response=$(curl --request GET "$url_api" --header "x-api-key: $api_key")
+    funecho
+    funspace
+    funjson
+}
+
 
 api_key="QhiUmXGhTrWTyyM/z8YBJA=="
 
@@ -83,11 +91,7 @@ while true; do
             funcorrect
             funspace
             read -p "Enter Domain: " domain
-            funecho
-            response=$(curl --request GET "https://opentip.kaspersky.com/api/v1/search/domain?request=$domain" --header "x-api-key: $api_key")
-            funecho
-            funspace
-            funjson
+            funreqorg("https://opentip.kaspersky.com/api/v1/search/ip?request=$hash")
             break
             ;;
         4)
@@ -118,7 +122,8 @@ while true; do
             funspace
             read -p "Enter Full File Analysis Hash: " file_hash
             funecho
-            response=$(curl --request POST "https://opentip.kaspersky.com/api/v1/getresult/file?request=$file_hash" --header "x-api-key: $api_key")funecho
+            response=$(curl --request POST "https://opentip.kaspersky.com/api/v1/getresult/file?request=$file_hash" --header "x-api-key: $api_key")
+            funecho
             funspace
             funjson
             break
