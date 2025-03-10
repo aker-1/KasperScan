@@ -43,12 +43,10 @@ function funjson() {
         if (.value | type) == "object" or (.value | type) == "array" then
             .value | recurse_kv
         else
-            "",
             "=============================",
             "Key    : " + (.key | tostring),
             "Value  : " + (.value | tostring),
             "=============================",
-            ""
         end;
     recurse_kv'
 }
