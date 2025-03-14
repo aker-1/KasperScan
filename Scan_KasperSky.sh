@@ -8,6 +8,7 @@ GREEN="\e[1;92m"
 WHITE="\e[1;97m"
 PINK="\e[1;95m"
 
+clear
 echo " "
 function funlogo(){
     toilet -f pagga -F metal KasperScan
